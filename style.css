@@ -1,63 +1,104 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  font-family: 'Georgia', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe9c7 100%);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,182,193,0.5) 0%, transparent 8%),
+    radial-gradient(circle at 90% 15%, rgba(255,214,102,0.5) 0%, transparent 8%),
+    radial-gradient(circle at 30% 80%, rgba(255,99,132,0.4) 0%, transparent 10%),
+    radial-gradient(circle at 75% 70%, rgba(255,182,193,0.5) 0%, transparent 9%),
+    linear-gradient(135deg, #fff0f5 0%, #ffe9c7 100%);
+  color: #6b1e3c;
 }
-
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
-  background: #2c3e50;
+  background: linear-gradient(90deg, #e63965, #ff8fa3);
   padding: 1rem;
+  box-shadow: 0 2px 10px rgba(230,57,101,0.3);
 }
-
 nav a {
-  color: white;
+  color: #fffaf0;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
-
+nav a::before {
+  content: "✿ ";
+}
 nav a:hover {
-  background:#2c3e50;
-  border-radius: 5px;
+  background: #ffd166;
+  color: #6b1e3c;
+  border-radius: 20px;
 }
-
 header {
   text-align: center;
-  padding: 2rem 1rem;
-  background: #1a252f;
-  color: white;
+  padding: 3rem 1rem;
+  background: linear-gradient(120deg, #ff6f91, #ffd166 60%, #ff9671);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
+header::after {
+  content: "👗 🌸 👗 🌸 👗";
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  letter-spacing: 0.5rem;
+  opacity: 0.85;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1.8rem;
+  padding: 2.5rem;
   justify-content: center;
 }
-
 .card {
-  background: #1a252f;
-  color: white; 
+  background: linear-gradient(160deg, #ffe4ec, #fff6e0);
+  color: #7a1f3d;
   flex: 1 1 250px;
   max-width: 300px;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.8rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(255,99,132,0.25);
+  border: 2px solid #ffd166;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
+.card::before {
+  content: "🌷";
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(230,57,101,0.35);
+}
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #2c3e50;
-  color: white;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, #e63965, #ff8fa3);
+  color: #fffaf0;
+}
+footer::before {
+  content: "🌸 👗 🌼 👗 🌸";
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
 }
